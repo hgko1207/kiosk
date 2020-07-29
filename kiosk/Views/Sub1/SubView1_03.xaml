@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="kiosk.Views.Sub1.SubView1_03"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kiosk.Views.Sub1"
+             mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920"
+             Unloaded="Sub03ViewUnloaded" Loaded="Sub03ViewLoaded">
+    <UserControl.Resources>
+        <DataTemplate x:Key="Page1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Foreground="#6acc22" FontSize="100" Text="보리밥" Style="{StaticResource EffectTextStyle}"/>
+                    <TextBlock Foreground="#fff" FontSize="100" Text="을 먹으면" Style="{StaticResource EffectTextStyle}"/>
+                </StackPanel>
+                <TextBlock Foreground="#fff" FontSize="100" HorizontalAlignment="Center" Text="방귀를 뀌는 이유" Style="{StaticResource EffectTextStyle}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 0">
+                    <TextBlock Foreground="#fff" FontSize="38" Text="보리에 들어있는 " Style="{StaticResource EffectTextStyle}"/>
+                    <TextBlock Foreground="#ffc600" FontSize="38" Text="베타글루칸" Style="{StaticResource EffectTextStyle}"/>
+                    <TextBlock Foreground="#fff" FontSize="38" Text="의 성분에 대해서 알아보고," Style="{StaticResource EffectTextStyle}"/>
+                </StackPanel>
+                <TextBlock Foreground="#fff" FontSize="38" HorizontalAlignment="Center" 
+                   Text="건강한 생활을 위해 가져야 할 식습관에 대해서 생각해 본다" Style="{StaticResource EffectTextStyle}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="Page2">
+            <StackPanel>
+                <TextBlock Foreground="#fff" FontSize="80" Text="보리에는 수용성 식이섬유인" HorizontalAlignment="Center" Style="{StaticResource NanumFont}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 76">
+                    <TextBlock Foreground="#cf0192" FontSize="80" FontWeight="Bold" Text="베타글루칸" Style="{StaticResource NanumFont}"/>
+                    <TextBlock Foreground="#fff" FontSize="80" Text="을 가지고 있습니다." Style="{StaticResource NanumFont}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15 0 0">
+                    <TextBlock FontSize="29.25" Text="이 " Style="{StaticResource BasicFont}"/>
+                    <TextBlock Foreground="#ffc600" FontSize="29.25" FontWeight="Bold" Text="베타글루칸"/>
+                    <TextBlock FontSize="29.25" Text="은 대장 내 미생물에 의해 발효되어" Style="{StaticResource BasicFont}"/>
+                </StackPanel>
+                <TextBlock FontSize="29.25" HorizontalAlignment="Center" Margin="0 10 0 0" Text="여러가지 휘발성 물질을 생성하게 됩니다." Style="{StaticResource BasicFont}"/>
+                <TextBlock FontSize="29.25" HorizontalAlignment="Center" Margin="0 10 0 0" Text="장내 가스를 유발하게 되고 따라서 방귀를 뀌게 되는 것입니다." Style="{StaticResource BasicFont}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="Page3">
+            <StackPanel>
+                <Rectangle Height="298" Width="446" Stroke="Black" StrokeThickness="1">
+                    <Rectangle.BitmapEffect>
+                        <DropShadowBitmapEffect Color="#240544" Direction="-45" ShadowDepth="25" Opacity="0.4" Softness="0" />
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../../Images/sub1/s03_img01.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15 0 0">
+                    <TextBlock FontSize="80" Text="베타글루칸" Style="{StaticResource BasicFont}"/>
+                    <TextBlock FontSize="45" Text=" [β-glucan]" VerticalAlignment="Bottom" Style="{StaticResource BasicFont}"/>
+                </StackPanel>
+                <TextBlock FontSize="24.75" HorizontalAlignment="Center" Margin="0 30 0 0" Text="베타글루칸은 면역력을 높여 암세포의 증식과 재발을 억제합니다." Style="{StaticResource BasicFont}"/>
+                <TextBlock FontSize="24.75" HorizontalAlignment="Center" Text="또한 체지방의 축적을 예방하여 비만예방효과도 있습니다." Style="{StaticResource BasicFont}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="Page4">
+            <Grid>
+                <Rectangle Height="480" Width="640" Stroke="Black" StrokeThickness="1">
+                    <Rectangle.BitmapEffect>
+                        <DropShadowBitmapEffect Color="#240544" Direction="-45" ShadowDepth="25" Opacity="0.4" Softness="0" />
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../../Images/sub1/s03_img02.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45 25 0 0" Width="243" Height="43" Background="Black" CornerRadius="10">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Style="{StaticResource BasicFont}" Text="베타글루칸 X1000배율"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="Page5">
+            <Grid>
+                <Rectangle Height="480" Width="640" Stroke="Black" StrokeThickness="1">
+                    <Rectangle.BitmapEffect>
+                        <DropShadowBitmapEffect Color="#240544" Direction="-45" ShadowDepth="25" Opacity="0.4" Softness="0" />
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../../Images/sub1/s03_img03.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45 25 0 0" Width="243" Height="43" Background="Black" CornerRadius="10">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Style="{StaticResource BasicFont}" Text="베타글루칸 X1500배율"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="Page6">
+            <Grid>
+                <Rectangle Height="480" Width="640" Stroke="Black" StrokeThickness="1">
+                    <Rectangle.BitmapEffect>
+                        <DropShadowBitmapEffect Color="#240544" Direction="-45" ShadowDepth="25" Opacity="0.4" Softness="0" />
+                    </Rectangle.BitmapEffect>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="../../Images/sub1/s03_img04.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45 25 0 0" Width="243" Height="43" Background="Black" CornerRadius="10">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Style="{StaticResource BasicFont}" Text="베타글루칸 X2000배율"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="170"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="192 0">
+            <Image Source="../../Images/sub/s_logo.png" Width="430"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#00000000" Offset="0.0" />
+                    <GradientStop Color="#FF000005" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Foreground="#b4afd4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="35" Margin="0 0 192 0" FontWeight="Bold">
+                전자현미경 이야기
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="192 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Style="{StaticResource ImageButtonStyle}" Click="PreBtnClick" VerticalAlignment="Center">
+                <Image Source="../../Images/sub/arrow_le.png" Width="63" Opacity="0.4"/>
+            </Button>
+            <Button Grid.Column="2" Style="{StaticResource ImageButtonStyle}" Click="NextBtnClick" VerticalAlignment="Center">
+                <Image Source="../../Images/sub/arrow_ri.png" Width="63" Opacity="0.4"/>
+            </Button>
+
+            <Border Background="Transparent" Grid.Column="1" 
+                    MouseMove="PageMouseMove" MouseLeftButtonDown="PageMouseLeftButtonDown" MouseLeftButtonUp="PageMouseUpButtonDown">
+                <Grid x:Name="gridHost" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ContentControl x:Name="ContentControl" Style="{StaticResource ContentStyle}">
+                        <ContentControl.RenderTransform>
+                            <TranslateTransform/>
+                        </ContentControl.RenderTransform>
+                    </ContentControl>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Foreground="#fff" FontSize="24" Text="손으로 화면을 넘겨주세요!"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="4" Margin="50 0 50 20">
+            <Button HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="PrevBtnClick">
+                <Image Source="../../Images/sub/prev.png" Width="115"/>
+            </Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="HomeBtnClick">
+                <Image Source="../../Images/sub/home.png" Width="135"/>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

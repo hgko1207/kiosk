@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="kiosk.Views.Sub1View"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920">
+
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="animationButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid Background="Transparent">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="0"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="RenderTransform.(RotateTransform.Angle)"
+                                    RepeatBehavior="Forever" AutoReverse="True" Duration="0:0:1.25" >
+                                <DiscreteDoubleKeyFrame Value="5" KeyTime="0%" />
+                                <SplineDoubleKeyFrame Value="-5" KeySpline="0.7,0.0 0.3,1.0" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="170"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="192 0">
+            <Image Source="../Images/sub/s_logo.png" Width="430"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#00000000" Offset="0.0" />
+                    <GradientStop Color="#FF000005" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Foreground="#b4afd4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="35" Margin="0 0 192 0" FontWeight="Bold">
+                전자현미경 이야기
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="192 130 192 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="61.4375"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="61.4375"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="61.4375"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub1Click">
+                    <Image Source="../Images/sub1/img01.png"/>
+                </Button>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" Margin="0 20 0 0" FontWeight="Bold" Text="연잎이 물방울에"/>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" Text="젖지 않는 이유" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub2Click">
+                    <Image Source="../Images/sub1/img02.png"/>
+                </Button>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" Margin="0 20 0 0" FontWeight="Bold" Text="곤충이 벽에"/>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" Text="잘 붙어있는 이유" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="4">
+                <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub3Click">
+                    <Image Source="../Images/sub1/img03.png"/>
+                </Button>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" Margin="0 20 0 0" FontWeight="Bold" Text="보리밥을 먹으면"/>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" Text="방귀를 뀌는 이유" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="6" >
+                <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub4Click">
+                    <Image Source="../Images/sub1/img04.png"/>
+                </Button>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" Margin="0 20 0 0" FontWeight="Bold" Text="허브를 만지면"/>
+                <TextBlock Foreground="#F1F1F1" HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" Text="향기가 나는 이유" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 0 0 20">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="HomeBtnClick">
+                <Image Source="../Images/sub/home.png" Width="135"/>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

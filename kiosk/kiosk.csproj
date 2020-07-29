@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEB3ACDA-F32F-45D9-9E26-305B29A5337B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kiosk</RootNamespace>
+    <AssemblyName>kiosk</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub1View.xaml.cs">
+      <DependentUpon>Sub1View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub1\SubView1_01.xaml.cs">
+      <DependentUpon>SubView1_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub1\SubView1_02.xaml.cs">
+      <DependentUpon>SubView1_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub1\SubView1_03.xaml.cs">
+      <DependentUpon>SubView1_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub1\SubView1_04.xaml.cs">
+      <DependentUpon>SubView1_04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2View.xaml.cs">
+      <DependentUpon>Sub2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_09_03.xaml.cs">
+      <DependentUpon>SubView2_09_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_09_02.xaml.cs">
+      <DependentUpon>SubView2_09_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_09_01.xaml.cs">
+      <DependentUpon>SubView2_09_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_08_03.xaml.cs">
+      <DependentUpon>SubView2_08_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_08_02.xaml.cs">
+      <DependentUpon>SubView2_08_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_08_01.xaml.cs">
+      <DependentUpon>SubView2_08_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_07_03.xaml.cs">
+      <DependentUpon>SubView2_07_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_07_02.xaml.cs">
+      <DependentUpon>SubView2_07_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_07_01.xaml.cs">
+      <DependentUpon>SubView2_07_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_06_03.xaml.cs">
+      <DependentUpon>SubView2_06_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_06_02.xaml.cs">
+      <DependentUpon>SubView2_06_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_06_01.xaml.cs">
+      <DependentUpon>SubView2_06_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_05_03.xaml.cs">
+      <DependentUpon>SubView2_05_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_05_02.xaml.cs">
+      <DependentUpon>SubView2_05_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_05_01.xaml.cs">
+      <DependentUpon>SubView2_05_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_04_03.xaml.cs">
+      <DependentUpon>SubView2_04_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_04_02.xaml.cs">
+      <DependentUpon>SubView2_04_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_04_01.xaml.cs">
+      <DependentUpon>SubView2_04_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_03_03.xaml.cs">
+      <DependentUpon>SubView2_03_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_03_02 .xaml.cs">
+      <DependentUpon>SubView2_03_02 .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_03_01.xaml.cs">
+      <DependentUpon>SubView2_03_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_02_03.xaml.cs">
+      <DependentUpon>SubView2_02_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_02_02.xaml.cs">
+      <DependentUpon>SubView2_02_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_01_03.xaml.cs">
+      <DependentUpon>SubView2_01_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_01_02.xaml.cs">
+      <DependentUpon>SubView2_01_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_02_01.xaml.cs">
+      <DependentUpon>SubView2_02_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub2\SubView2_01_01.xaml.cs">
+      <DependentUpon>SubView2_01_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3View.xaml.cs">
+      <DependentUpon>Sub3View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3\SubView3_05.xaml.cs">
+      <DependentUpon>SubView3_05.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3\SubView3_04.xaml.cs">
+      <DependentUpon>SubView3_04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3\SubView3_03.xaml.cs">
+      <DependentUpon>SubView3_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3\SubView3_02.xaml.cs">
+      <DependentUpon>SubView3_02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub3\SubView3_01.xaml.cs">
+      <DependentUpon>SubView3_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4View.xaml.cs">
+      <DependentUpon>Sub4View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_01.xaml.cs">
+      <DependentUpon>SubView4_01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_12.xaml.cs">
+      <DependentUpon>SubView4_12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_11.xaml.cs">
+      <DependentUpon>SubView4_11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_10.xaml.cs">
+      <DependentUpon>SubView4_10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_09.xaml.cs">
+      <DependentUpon>SubView4_09.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_08.xaml.cs">
+      <DependentUpon>SubView4_08.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_07.xaml.cs">
+      <DependentUpon>SubView4_07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_06.xaml.cs">
+      <DependentUpon>SubView4_06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_05.xaml.cs">
+      <DependentUpon>SubView4_05.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_04.xaml.cs">
+      <DependentUpon>SubView4_04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_03.xaml.cs">
+      <DependentUpon>SubView4_03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sub4\SubView4_02.xaml.cs">
+      <DependentUpon>SubView4_02.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\CustomResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Sub1View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub1\SubView1_01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub1\SubView1_02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub1\SubView1_03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub1\SubView1_04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub2View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_09_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_09_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_09_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_08_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_08_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_08_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_07_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_07_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_07_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_06_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_06_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_06_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_05_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_05_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_05_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_04_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_04_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_04_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_03_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_03_02 .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_03_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_02_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_02_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_01_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_01_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_02_01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub2\SubView2_01_01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub3View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub3\SubView3_05.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub3\SubView3_04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub3\SubView3_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub3\SubView3_02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub3\SubView3_01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub4View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_12.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_11.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_10.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_09.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_08.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_07.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_06.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_05.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Sub4\SubView4_02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\gamja-flower-v5-korean_latin-regular.ttf" />
+    <Resource Include="Fonts\nanum-pen-script-v11-korean_latin-regular.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub\s_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\main\background.jpg" />
+    <Resource Include="Images\main\btn01.png" />
+    <Resource Include="Images\main\btn02.png" />
+    <Resource Include="Images\main\btn03.png" />
+    <Resource Include="Images\main\btn04.png" />
+    <Resource Include="Images\main\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub\arrow_le.png" />
+    <Resource Include="Images\sub\arrow_ri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub\next.png" />
+    <Resource Include="Images\sub\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\img01.png" />
+    <Resource Include="Images\sub1\img02.png" />
+    <Resource Include="Images\sub1\img03.png" />
+    <Resource Include="Images\sub1\img04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\s01_img01.png" />
+    <Resource Include="Images\sub1\s01_img02.png" />
+    <Resource Include="Images\sub1\s01_img03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\s01_img04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\s02_img04_2.png" />
+    <Resource Include="Images\sub1\s02_img04_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\s02_img01.png" />
+    <Resource Include="Images\sub1\s02_img02.png" />
+    <Resource Include="Images\sub1\s02_img03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub1\s03_img01.png" />
+    <Resource Include="Images\sub1\s03_img02.png" />
+    <Resource Include="Images\sub1\s03_img03.png" />
+    <Resource Include="Images\sub1\s03_img04.png" />
+    <Resource Include="Images\sub1\s04_img01.png" />
+    <Resource Include="Images\sub1\s04_img02.png" />
+    <Resource Include="Images\sub1\s04_img03.png" />
+    <Resource Include="Images\sub1\s04_img04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub4\img01.png" />
+    <Resource Include="Images\sub4\img02.png" />
+    <Resource Include="Images\sub4\img03.png" />
+    <Resource Include="Images\sub4\img04.png" />
+    <Resource Include="Images\sub4\img05.png" />
+    <Resource Include="Images\sub4\img06.png" />
+    <Resource Include="Images\sub4\img07.png" />
+    <Resource Include="Images\sub4\img08.png" />
+    <Resource Include="Images\sub4\img09.png" />
+    <Resource Include="Images\sub4\img10.png" />
+    <Resource Include="Images\sub4\img11.png" />
+    <Resource Include="Images\sub4\img12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub4\info01.jpg" />
+    <Resource Include="Images\sub4\info02.jpg" />
+    <Resource Include="Images\sub4\info03.jpg" />
+    <Resource Include="Images\sub4\info04.jpg" />
+    <Resource Include="Images\sub4\info05.jpg" />
+    <Resource Include="Images\sub4\info06.jpg" />
+    <Resource Include="Images\sub4\info07.jpg" />
+    <Resource Include="Images\sub4\info08.jpg" />
+    <Resource Include="Images\sub4\info09.png" />
+    <Resource Include="Images\sub4\info10.jpg" />
+    <Resource Include="Images\sub4\info11.png" />
+    <Resource Include="Images\sub4\info12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub3\point.png" />
+    <Resource Include="Images\sub3\video01.png" />
+    <Resource Include="Images\sub3\video02.png" />
+    <Resource Include="Images\sub3\video03.png" />
+    <Resource Include="Images\sub3\video04.png" />
+    <Resource Include="Images\sub3\video05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sub2\leImg.png" />
+    <Resource Include="Images\sub2\riImg.png" />
+    <Resource Include="Images\sub2\p_img01.png" />
+    <Resource Include="Images\sub2\p_img02.png" />
+    <Resource Include="Images\sub2\p_img03.png" />
+    <Resource Include="Images\sub2\p_img04.png" />
+    <Resource Include="Images\sub2\p_img05.png" />
+    <Resource Include="Images\sub2\p_img06.png" />
+    <Resource Include="Images\sub2\p_img07.png" />
+    <Resource Include="Images\sub2\p_img08.png" />
+    <Resource Include="Images\sub2\p_img09.png" />
+    <Resource Include="Images\sub2\p_img10.png" />
+    <Resource Include="Images\sub2\p_img11.png" />
+    <Resource Include="Images\sub2\p_img12.png" />
+    <Resource Include="Images\sub2\p_img13.png" />
+    <Resource Include="Images\sub2\p_img14.png" />
+    <Resource Include="Images\sub2\p_img15.png" />
+    <Resource Include="Images\sub2\p_img16.png" />
+    <Resource Include="Images\sub2\p_img17.png" />
+    <Resource Include="Images\sub2\p_img18.png" />
+    <Resource Include="Images\sub2\p_img19.png" />
+    <Resource Include="Images\sub2\p_img20.png" />
+    <Resource Include="Images\sub2\p_img21.png" />
+    <Resource Include="Images\sub2\p_img22.png" />
+    <Resource Include="Images\sub2\p_img23.png" />
+    <Resource Include="Images\sub2\p_img24.png" />
+    <Resource Include="Images\sub2\p_img25.png" />
+    <Resource Include="Images\sub2\p_img26.png" />
+    <Resource Include="Images\sub2\p_img27.png" />
+    <Resource Include="Images\sub2\title.png" />
+    <Resource Include="Images\sub2\btn01.png" />
+    <Resource Include="Images\sub2\btn02.png" />
+    <Resource Include="Images\sub2\btn03.png" />
+    <Resource Include="Images\sub2\btn04.png" />
+    <Resource Include="Images\sub2\btn05.png" />
+    <Resource Include="Images\sub2\btn06.png" />
+    <Resource Include="Images\sub2\btn07.png" />
+    <Resource Include="Images\sub2\btn08.png" />
+    <Resource Include="Images\sub2\btn09.png" />
+    <Content Include="Videos\video01.mp4" />
+    <Content Include="Videos\video02.mp4" />
+    <Content Include="Videos\video03.mp4" />
+    <Content Include="Videos\video04.mp4" />
+    <Content Include="Videos\video05.mp4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

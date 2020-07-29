@@ -1,0 +1,249 @@
+﻿<UserControl x:Class="kiosk.Views.Sub2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kiosk.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="animationButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Grid Background="Transparent">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <RotateTransform Angle="0"/>
+                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames
+                                     Storyboard.TargetProperty="RenderTransform.Children[0].Angle" Duration="0:0:1.6" >
+                                <EasingDoubleKeyFrame Value="6" KeyTime="0%"/>
+                                <EasingDoubleKeyFrame Value="-2" KeyTime="30%"/>
+                                <EasingDoubleKeyFrame Value="1" KeyTime="45%"/>
+                                <EasingDoubleKeyFrame Value="-1" KeyTime="60%"/>
+                                <EasingDoubleKeyFrame Value="1" KeyTime="75%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="90%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+
+                            <DoubleAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="RenderTransform.Children[1].ScaleX" Duration="00:00:1.6">
+                                <EasingDoubleKeyFrame Value="0.3" KeyTime="0%"/>
+                                <EasingDoubleKeyFrame Value="1.03" KeyTime="30%"/>
+                                <EasingDoubleKeyFrame Value="0.98" KeyTime="45%"/>
+                                <EasingDoubleKeyFrame Value="1.01" KeyTime="60%"/>
+                                <EasingDoubleKeyFrame Value="0.99" KeyTime="75%"/>
+                                <EasingDoubleKeyFrame Value="1.01" KeyTime="90%"/>
+                                <EasingDoubleKeyFrame Value="1" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+
+                            <DoubleAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="RenderTransform.Children[1].ScaleY" Duration="00:00:1.6">
+                                <EasingDoubleKeyFrame Value="0.3" KeyTime="0%"/>
+                                <EasingDoubleKeyFrame Value="1.03" KeyTime="30%"/>
+                                <EasingDoubleKeyFrame Value="0.98" KeyTime="45%"/>
+                                <EasingDoubleKeyFrame Value="1.01" KeyTime="60%"/>
+                                <EasingDoubleKeyFrame Value="0.99" KeyTime="75%"/>
+                                <EasingDoubleKeyFrame Value="1.01" KeyTime="90%"/>
+                                <EasingDoubleKeyFrame Value="1" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+
+                            <DoubleAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="RenderTransform.Children[2].X" Duration="0:0:1.6">
+                                <EasingDoubleKeyFrame Value="-82.8" KeyTime="0%"/>
+                                <EasingDoubleKeyFrame Value="5.52" KeyTime="30%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="45%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="60%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="75%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="90%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+
+                            <DoubleAnimationUsingKeyFrames
+                                    Storyboard.TargetProperty="RenderTransform.Children[2].Y" Duration="0:0:1.6">
+                                <EasingDoubleKeyFrame Value="82.8" KeyTime="0%"/>
+                                <EasingDoubleKeyFrame Value="-5.52" KeyTime="30%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="45%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="60%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="75%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="90%"/>
+                                <EasingDoubleKeyFrame Value="0" KeyTime="100%"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="170"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="192 0">
+            <Image Source="../Images/sub/s_logo.png" Width="430"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#00000000" Offset="0.0" />
+                    <GradientStop Color="#FF000005" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Foreground="#b4afd4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="35" Margin="0 0 192 0" FontWeight="Bold">
+                전자현미경으로 본 세계
+            </TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub1BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub1BtnClick">
+                        <Image Source="../Images/sub2/btn01.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="개미"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub2BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub2BtnClick">
+                        <Image Source="../Images/sub2/btn02.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="나방"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="4" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub3BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub3BtnClick">
+                        <Image Source="../Images/sub2/btn03.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="모기"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="6" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub4BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub4BtnClick">
+                        <Image Source="../Images/sub2/btn04.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="개나리"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="8" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub5BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub5BtnClick">
+                        <Image Source="../Images/sub2/btn05.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="벚꽃"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="0 61 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub6BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub6BtnClick">
+                        <Image Source="../Images/sub2/btn06.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="스타킹"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub7BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub7BtnClick">
+                        <Image Source="../Images/sub2/btn07.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="손수건"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="4" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub8BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub8BtnClick">
+                        <Image Source="../Images/sub2/btn08.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="상한 머리카락"/>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Column="6" Style="{StaticResource MouseHoverStyle}" Width="276" MouseLeftButtonDown="Sub9BtnClick">
+                    <Button Style="{StaticResource animationButtonStyle}" RenderTransformOrigin="0.5,0.5" Click="Sub9BtnClick">
+                        <Image Source="../Images/sub2/btn09.png"/>
+                    </Button>
+                    <Grid Margin="0 11 0 0" HorizontalAlignment="Center">
+                        <Image Source="../Images/sub2/title.png" Stretch="Fill" Height="48"/>
+                        <TextBlock Foreground="#666666" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="호박꽃"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 0 0 20">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="HomeBtnClick">
+                <Image Source="../Images/sub/home.png" Width="135"/>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

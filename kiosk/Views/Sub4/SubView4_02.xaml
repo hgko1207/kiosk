@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="kiosk.Views.Sub4.SubView4_02"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="170"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="192 0">
+            <Image Source="../../Images/sub/s_logo.png" Width="430"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#00000000" Offset="0.0" />
+                    <GradientStop Color="#FF000005" Offset="1.0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Foreground="#b4afd4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="35" Margin="0 0 192 0" FontWeight="Bold">
+                이미징 사진
+            </TextBlock>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="../../Images/sub4/info02.jpg" Width="676"/>
+            <StackPanel Margin="50 0 0 0" Width="720">
+                <Border BorderBrush="#5dceea" BorderThickness="0 2 0 2" SnapsToDevicePixels="True">
+                    <StackPanel>
+                        <TextBlock Foreground="#f7f7f7" FontSize="28" FontWeight="Bold" Margin="0 15" HorizontalAlignment="Center" Text="벅스 라이프(A Bug's Life)"/>
+                        <Border BorderBrush="#483ac0" BorderThickness="0 1 0 1">
+                            <Grid Margin="10 15" VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Foreground="#d9b900" FontSize="18" Text="시료"/>
+                                <TextBlock Grid.Column="1" Foreground="#f7f7f7" FontSize="18" Text=": 방울토마토 줄기(300배)"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="10 15" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Foreground="#d9b900" FontSize="18" Text="사용장비"/>
+                            <TextBlock Grid.Column="1" Foreground="#f7f7f7" FontSize="18" Text=": SEM(주사전자현미경)"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="#483ac0" BorderThickness="0 0 0 1" SnapsToDevicePixels="True">
+                    <TextBlock Foreground="#f7f7f7" Margin="10 15" TextWrapping="Wrap" FontSize="18" LineHeight="33" 
+                               Text="토마토 줄기 위의 모용(毛用, trichomes)들의 형상은 풀숲의 형상이고, 토마토 녹애응애(Aculops lycopersici Massee)의 모습을 함께 관찰하였다. 이는 벌레가 숲 속에서 먹이를 구하기 위해 위험을 무릅쓰고 밖으로 나가기 위해 주위를 살피는 모습을 표현한 작품으로 제목을 '벅스 라이프(A Bug's Life)' 라 정하였다."/>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="3" Margin="50 0 50 20">
+            <Button HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="PrevBtnClick">
+                <Image Source="../../Images/sub/prev.png" Width="115"/>
+            </Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="HomeBtnClick">
+                <Image Source="../../Images/sub/home.png" Width="135"/>
+            </Button>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource ImageButtonStyle}" Click="NextBtnClick">
+                <Image Source="../../Images/sub/next.png" Width="115"/>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
